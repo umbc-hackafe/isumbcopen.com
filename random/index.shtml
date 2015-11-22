@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>random</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var locs = [
+      '/',
+      '/ads',
+      '/app',
+      '/counter',
+      '/doge',
+      '/fast',
+      '/forboringpeople',
+      '/freeman',
+      '/karim',
+      '/letitgo',
+      '/paws',
+      '/snow',
+      '/special'];
+      history.pushState(null, null, "/random/");
+      window.location.href=locs[Math.floor(Math.random()*locs.length)];
+    </script>
+  </body>
+</html>

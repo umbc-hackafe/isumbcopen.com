@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Is UMBC Open?</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="Check whether UMBC is currently open for classes" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59800982-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+  <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+
+  <style type="text/css">
+    .dialog-confirm {
+      font-size: normal;
+      padding: 0px;
+    }
+    .ui-dialog {
+    color: #ed1c24;
+    background-color: #ffc20e;
+      border-style: solid;
+      border-width: 2px;
+    }
+    .okbutton {
+      margin: 5px;
+      background-color:#0000ff;
+      vertical-align: bottom;
+      border-radius:6px;
+      border:2px solid #000000;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:arial;
+      font-size:20px;
+      height: 40px;
+      padding:5px 20px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #2f6627;
+    }
+    .okbutton:hover {
+      background-color:#00ff00;
+    }
+    .okbutton:active {
+      position:relative;
+      top:1px;
+    }
+    .reallynobutton {
+    background-color: #ff0000;
+    }
+    .nobutton {
+      margin: 5px;
+      vertical-align: bottom;
+      background-color:#00ff00;
+      border-radius:6px;
+      border:2px solid #000000;
+      display:inline-block;
+      cursor:pointer;
+      color:#000000;
+      font-family:arial;
+      font-size:14px;
+      width: 160px;
+      height: 40px;
+      padding:0px 20px;
+      text-decoration:none;
+    }
+    .nobutton:hover {
+      background-color:#bbbbbb;
+    }
+    .nobutton:active {
+      position:relative;
+      top:1px;
+    }
+    .ui-dialog-titlebar {
+      background: white;
+      border: none;
+    }
+    .no-close .ui-dialog-titlebar-close {
+      display: none;
+    }
+
+    .paw {
+	color: #000;
+	position: relative;
+	cursor: pointer;
+	background-image: url("/myumbc-sprites.png");
+	background-position: -512px -160px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	vertical-align: top;
+	position: fixed;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	border-radius: 4px;
+	text-align: center;
+	border-color: gray;
+    }
+
+    .paw .count {
+    position: absolute;
+    bottom: 2px;
+    left: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial;
+    line-height: 1.24;
+    border-spacing: 2px;
+    border-color: gray;
+    }
+
+    body {
+    cursor: url("/mouse.png"),pointer;
+    padding: 160px;
+    }
+
+    .da {
+    font-size: 36pt;
+    font-size: 3vw;
+    position: fixed;
+    overflow: hidden;
+    display: block;
+    background-color: #ffc20e;
+    color: #ed1c24;
+    font-family: "Comic Sans MS";
+    cursor: url("/mouse.png"),pointer;
+    }
+
+    .invert {
+    background-color: #ed1c24;
+    color: #ffc20e;
+    }
+
+    .banner {
+    left: 15%;
+    right: 15%;
+    height: 100px;
+    width: 70%;
+    }
+
+    .side {
+    vertical-align: center;
+    line-height: 60px;
+    font-size: 18pt;
+    top: 10%;
+    bottom: 10%;
+    height: 80%;
+    width: 150px;
+    color: #ffc20e;
+    background-color: #ed1c24;
+    }
+
+    .side.invert {
+    color: #ed1c24;
+    background-color: #ffc20e;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function bigger() {
+    document.getElementById("isopen").style.fontSize = (parseFloat(document.getElementById("isopen").style.fontSize) * 1.2) + "pt";
+    }
+
+  </script>
+  <script>
+    var das = ["UMBC FOOTBALL SEASON TICKETS", "PRO CHESS LESSONS", "ROOFTOP PARKING PASSES",
+    "QUALITY SNOW SHOVELS", "PARK ANYWHERE WITH ONE WEIRD TRICK", "27 D-HALL MEALS THAT WILL SHOCK YOU!",
+    "IGLOO FOR RENT!! WINTER ONLY", "MEET SEXY SINGLE TIME TRAVELERS", "0.6% OFF ONE MEAL AT TRUE GRIT'S",
+    "CA$$$$H 4 TEXTBOOKS!!!", "BULK RAMEN BULK RAMEN BULK RAMEN", "CALC 4 TUTORING", "ASSORTED ICE SKATES - ACT FAST!",
+    "GET THE NEW HIGHERONE CARD"
+    ];
+
+    function switchA(id) {
+    $(id).removeClass("invert");
+    setTimeout(function(){switchB(id);},Math.floor(Math.random()*500)+100);
+    }
+
+    function switchB(id) {
+    $(id).addClass("invert");
+    setTimeout(function(){switchA(id);},Math.floor(Math.random()*500)+100);
+    }
+    function pwop() {
+    $("#dialog-confirm").html(das[Math.floor(Math.random()*das.length)]);
+    $("#dialog-confirm").show();
+    $( "#dialog-confirm" ).dialog({
+      dialogClass: "no-close",
+      resizable: false,
+      height:150,
+      width:300,
+    modal: true,
+    title: "OOH LOOK AT THIS WOW!!!",
+      buttons: [
+        {
+          text: "OK",
+          "class": 'okbutton',
+          click: function() {
+            $( this ).dialog( "close" );
+            setTimeout(function(){pwop();},Math.floor(Math.random()*180000));
+          }
+        },
+        {
+          text: "DOUBLE OK",
+          "class": 'nobutton',
+          click: function() {
+            $( this ).dialog( "close" );
+            setTimeout(function(){pwop();},Math.floor(Math.random()*30000));
+          }
+        },
+        {
+          text: "NOT OK",
+          "class": 'reallynobutton',
+          click: function() {
+            $( this ).dialog( "close" );
+            setTimeout(function(){pwop();},Math.floor(Math.random()*5000));
+          }
+        }
+      ]
+    });
+    }
+  $(function() {
+    var pos = ["top","bottom","left","right"];
+    for (var i in pos) {
+      var id = "#da-"+pos[i];
+      $(id).html(das[Math.floor(Math.random()*das.length)]);
+      switchB(id);
+    }
+    window.onbeforeunload = function(e){unload(e);};
+    pwop();
+    });
+    function unload(e) {
+    if (e) e.returnvalue = "BUT LOOK AT ALL THESE FINE OFFERS!!!";
+    
+    return "BUT LOOK AT ALL THESE FINE OFFERS!!!";
+    }
+  </script>
+</head>
+
+<body onbeforeunload="unload" style="text-align: center; padding-top: 200px; background-color: #ffffff;">
+
+<div id="dialog-confirm" class="dialog-confirm" style="display: none;">
+ADVERTISEMENTS
+</div>
+
+</div>
+<a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
+Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0;" onclick="bigger();">
+<!--#include file="/state.txt" -->
+</a>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
+
+<div id="da-top" class="da banner" style="top: 5px;">SNOW REMOVAL EQUIPMENT</div>
+<div id="da-bottom" class="da banner" style="bottom: 5px;">SALT BY THE TRUCKLOAD</div>
+<div id="da-left" class="da side" style="left: 5px;">CHESS LESSONS</div>
+<div id="da-right" class="da side" style="right: 5px;"></div>
+
+</body>
+</html>

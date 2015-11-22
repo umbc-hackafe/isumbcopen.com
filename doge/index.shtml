@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>isumbcopen.com</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Check whether UMBC is currently open for classes" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59800982-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script type="text/javascript">
+    function test() {
+      if (document.getElementById("realstatus").innerHTML.indexOf("YEP") == -1) {
+        document.getElementById("open").style.display = "none";
+        document.getElementById("closed").style.display = "inline";
+      }
+    }
+  </script>
+  <style>
+  #grad {
+    background: -webkit-linear-gradient(left, #ac8741, #e8d6a6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ac8741, #e8d6a6); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ac8741, #e8d6a6); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ac8741, #e8d6a6); /* Standard syntax */
+  }
+  </style>
+</head>
+
+<body onload="test();" style="text-align: center;" id="grad">
+<img id="open" src="open_doge.png" style="height:100%;position:absolute;top:0;left:0;overflow:hidden;"/>
+<img id="closed" src="closed_doge.png" style="display: none;height:100%;position:absolute;top:0;left:0;overflow:hidden;"/>
+<div id="realstatus" style="display: none;"><!--#include file="/state.txt" --></div>
+
+</body>
+</html>

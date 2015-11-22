@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>isumbcopen.com</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Check whether UMBC is currently open for classes" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59800982-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+  <script type="text/javascript" src="http://loktar00.github.io/JQuery-Snowfall/snowfall.jquery.min.js"></script>
+
+  <script type="text/javascript">
+    function bigger() {
+    document.getElementById("isopen").style.fontSize = (parseFloat(document.getElementById("isopen").style.fontSize) * 1.2) + "pt";
+    }
+
+    function blink() {
+        var el = document.getElementById("isopen");
+        var map = {"rgb(255, 108, 180)": "rgb(0, 255, 0)", "rgb(0, 255, 0)": "rgb(255, 108, 180)"};
+    el.style.color = map[el.style.color];
+        setTimeout(function() {blink();}, 30);
+    }
+
+    function blinkbg() {
+    var body = document.body;
+    var map = {"rgb(255, 108, 180)": "rgb(0, 255, 0)", "rgb(0, 255, 0)": "rgb(255, 108, 180)"};
+    body.style.background = map[body.style.background];
+    setTimeout(function() {blinkbg();}, 40);
+    }
+
+    function warning() {
+    setTimeout(function() {setText();}, 1900);
+    setTimeout(function() {blink();blinkbg();}, 2000);
+    }
+
+    function setText() {
+    document.getElementById('isopen').innerHTML = '<!--#include file="/state.txt" -->';
+    }
+
+    $(function(){
+     $(document).snowfall({collection: ".collectonme", flakeCount: 1000});
+    });
+  </script>
+</head>
+
+<body onload="warning();" style="text-align: center; padding-top: 200px; background-color: #00FF00;">
+  You have been seizing for:
+  <script language="JavaScript">
+    var d = new Date();
+    TargetDate = d;
+    BackColor = "orange";
+    ForeColor = "navy";
+    CountActive = true;
+    CountStepper = 1;
+    LeadingZero = true;
+    DisplayFormat = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
+    FinishMessage = "";
+  </script>
+  <script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
+  <br />
+<a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
+Avenir, sans-serif; text-decoration: none; color: #FF69B4; padding: 0;" onclick="bigger();">
+Caution: Seizure Warning!
+</a>
+
+<div class="collectonme" style="position: fixed; display: block; bottom: 0; height: 5px;  width: 99%;"></div>
+</body>
+</html>
