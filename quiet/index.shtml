@@ -27,14 +27,14 @@
 
 <body style="text-align: center; padding-top: 200px;">
 
-<a id="quiet" style="font-size: 4pt; font-family: Avenir, sans-serif; text-decoration: none; color: black; font-variant: small-caps;">use your inside voice...</a><br/>
+<a id="quiet" style="font-size: 4pt; font-family: Avenir, sans-serif; text-decoration: none; color: black;">use your inside voice...</a><br/>
   
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
 Avenir, sans-serif; text-decoration: none; color: black; text-transform: lowercase;" onclick="smaller();">
 <!--#include file="/state.txt" -->
 </a>
 
-<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps; text-transform: lowercase;"><!--#include file="/detail.txt" --></div>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; text-transform: lowercase;"><!--#include file="/detail.txt" --></div>
 
 </body>
 </html>
