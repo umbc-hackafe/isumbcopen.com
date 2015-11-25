@@ -46,7 +46,7 @@ You have been serenaded for:
     DisplayFormat = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
     FinishMessage = "";
   </script>
-  <script language="JavaScript" src="http://scripts.hashemian.com/js/countdown.js"></script>
+  <script language="JavaScript" src="./countdown.js"></script>
 <div id="realstatus" style="display: none;"><!--#include file="/state.txt" --></div>
 
 </body>
