@@ -15,7 +15,7 @@
   </script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
-  <script type="text/javascript" src="http://loktar00.github.io/JQuery-Snowfall/snowfall.jquery.min.js"></script>
+  <script type="text/javascript" src="https://loktar00.github.io/JQuery-Snowfall/snowfall.jquery.min.js"></script>
 
   <script type="text/javascript">
     function bigger() {
