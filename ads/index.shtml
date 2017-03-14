@@ -256,7 +256,7 @@ ADVERTISEMENTS
 
 </div>
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
-Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0;" onclick="bigger();">
+Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-select: none;" onclick="bigger();">
 <!--#include file="/state.txt" -->
 </a>
 <div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>

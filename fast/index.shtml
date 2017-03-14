@@ -68,7 +68,7 @@
   <script language="JavaScript" src="/countdown.js"></script>
   <br />
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
-Avenir, sans-serif; text-decoration: none; color: #FF69B4; padding: 0;" onclick="bigger();">
+Avenir, sans-serif; text-decoration: none; color: #FF69B4; padding: 0; user-select: none;" onclick="bigger();">
 Caution: Seizure Warning!
 </a>
 
