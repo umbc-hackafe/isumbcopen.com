@@ -16,10 +16,8 @@
 
   </script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-  <script src="cast.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+  <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 
   <style type="text/css">
     .download {
@@ -94,8 +92,7 @@
 	color: #000;
 	position: relative;
 	cursor: pointer;
-	background-image: url("/myumbc-sprites.png");
-	background-position: -512px -160px;
+	background-image: url("/basketball.png");
 	background-repeat: no-repeat;
 	overflow: hidden;
 	display: inline-block;
@@ -111,6 +108,7 @@
     }
 
     .paw .count {
+    display: none;
     position: absolute;
     bottom: 2px;
     left: 3px;
@@ -132,21 +130,8 @@
     }
 
   </script>
-</head>
-
-<body style="text-align: center; padding-top: 200px; background-color: #ffffff;">
-<div id="dialog-confirm" class="dialog-confirm" style="display: none;">
-Want to visit an incomplete version of <br />
-our website where you <b>can't zoom?</b> <br />
-<div class="download">DOWNLOAD OUR APP!</div>
-</div>
-<a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
-Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-select: none;" onclick="bigger();">
-<!--#include file="/state.txt" -->
-</a>
-<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
-<!--<div id="shameless-plug" style="font-size: 24pt; font-family: Avenir, sans, sans-serif;"><a href="http://shouldumbcbeopen.com/">Help track the state of UMBC's paths!</a></div>-->
-  <script type="text/javascript">
+  <script>
+    var wait = 80;
   $(function() {
     if (navigator.userAgent.indexOf("Android") != -1) {
     $("#dialog-confirm").show();
@@ -174,26 +159,33 @@ Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-sele
       ]
     });
     }
-  if (document.referrer && document.referrer.indexOf("umbc.edu") != -1) {
-  var i = 0;
+  if (true || document.referrer && document.referrer.indexOf("umbc.edu") != -1) {
+  var i = 1;
   var interval = setInterval(function() {
-	      $("<span>").addClass("count").addClass("first").addClass("last").text(""+(i+1)).appendTo($("<a>").addClass("paw").attr("id", "paw-" + i).attr('href','/paws/').css({left: Math.random() * $(document).width(), top: -40, transform: 'rotate('+((Math.random()-.5)*720)+'deg)'}).data('rand', Math.random() - .5).animate({top: $(document).height()+15, opacity: .1}, {
-		  duration: 500 + Math.random() * 5000,
-//	easing: "swing",
+    $("<span>").addClass("count").addClass("first").addClass("last").appendTo($("<a>").addClass("paw").attr("id", "paw-" + i).css({left: Math.random() * $(document).width(), top: -40, transform: 'rotate('+((Math.random()-.5)*720)+'deg)'}).data('rand', Math.random() - .5).animate({top:
+	$(document).height()+15, opacity: .1}, {
+	duration: 500 + Math.random() * 5000,
 	step: function(n,fx) {
 	if (fx.prop == "opacity" && Math.abs(n-.1) < .00001) $(this).remove();
-	}
-      }).appendTo($(document.body)));
-      if (++i >= <!--#include file="/paws.txt" -->) {
-      clearInterval(interval);
-      }
-      }, 80);
+						     }
+      }).click(function(){window.wait-=5;if (window.wait<40){location.href='/basketball';}}).appendTo($(document.body)));
+      i++;
+      }, wait);
       }
   });
   </script>
-<br />
-<div id="castbutton">
-<img id="casticon" style="visibility:hidden;" src="idle.png" onclick="launchApp()" onmouseover="this.src='hover.png'" onmouseout="this.src='idle.png'"  width=80 height=60/>
+</head>
+
+<body style="text-align: center; padding-top: 200px; background-color: #ffffff;">
+<div id="dialog-confirm" class="dialog-confirm" style="display: none;">
+Want to visit an incomplete version of <br />
+our website where you <b>can't zoom?</b> <br />
+<div class="download">DOWNLOAD OUR APP!</div>
 </div>
+<a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
+Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-select: none;" onclick="bigger();">
+<!--#include file="/state.txt" -->
+</a>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
 </body>
 </html>
