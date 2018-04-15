@@ -32,10 +32,10 @@
 <body style="text-align: center; padding-top: 200px; background-color: #000000;">
 
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
-Avenir, sans-serif; text-decoration: none; color: #0000ff; padding: 0; user-select: none;" onclick="bigger();">
+Avenir, sans-serif; text-decoration: none; color: #0000ff; padding: 0;" onclick="bigger();">
 <!--#include file="/state.txt" -->
 </a>
-<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #0000ff; padding: 0; font-variant: small-caps; user-select: none;"><!--#include file="/detail.txt" --></div>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #0000ff; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
 <div class="collectonme" style="position: fixed; display: block; bottom: 0; height: 5px;  width: 99%;"></div>
 </body>
 </html>
