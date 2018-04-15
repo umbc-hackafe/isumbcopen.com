@@ -212,8 +212,8 @@ Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0;" onclick=
   <span id="delays" class="counters" style="display: none;"><span id="delay-counter">000</span> DAYS WITHOUT DELAY</span>
   <span id="early" class="counters" style="display: none;"><span id="early-counter">000</span> DAYS WITHOUT EARLY CLOSURE</span>
 </a>
-<div id="close-date" style="display: none;"><!--#include file="/close-date.txt" --></div>
-<div id="delay-date" style="display: none;"><!--#include file="/delay-date.txt" --></div>
-<div id="early-date" style="display: none;"><!--#include file="/early-date.txt" --></div>
+<div id="close-date" style="display: none;"><!--#include virtual="/close-date.txt" --></div>
+<div id="delay-date" style="display: none;"><!--#include virtual="/delay-date.txt" --></div>
+<div id="early-date" style="display: none;"><!--#include virtual="/early-date.txt" --></div>
 </body>
 </html>

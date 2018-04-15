@@ -162,7 +162,7 @@
   if (true || document.referrer && document.referrer.indexOf("umbc.edu") != -1) {
   var i = 1;
   var interval = setInterval(function() {
-    $("<span>").addClass("count").addClass("first").addClass("last").text(""+((i-1)%<!--#include file="/paws.txt" -->+1)).appendTo($("<a>").addClass("paw").attr("id", "paw-" + i).css({left: Math.random() * $(document).width(), top: -40, transform: 'rotate('+((Math.random()-.5)*720)+'deg)'}).data('rand', Math.random() - .5).animate({top:
+    $("<span>").addClass("count").addClass("first").addClass("last").text(""+((i-1)%<!--#include virtual="/paws.txt" -->+1)).appendTo($("<a>").addClass("paw").attr("id", "paw-" + i).css({left: Math.random() * $(document).width(), top: -40, transform: 'rotate('+((Math.random()-.5)*720)+'deg)'}).data('rand', Math.random() - .5).animate({top:
 	$(document).height()+15, opacity: .1}, {
 	duration: 500 + Math.random() * 5000,
 	step: function(n,fx) {
@@ -184,8 +184,8 @@ our website where you <b>can't zoom?</b> <br />
 </div>
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
 Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-select: none;" onclick="bigger();">
-<!--#include file="/state.txt" -->
+<!--#include virtual="/state.txt" -->
 </a>
-<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include virtual="/detail.txt" --></div>
 </body>
 </html>

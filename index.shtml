@@ -142,9 +142,9 @@ our website where you <b>can't zoom?</b> <br />
 </div>
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
 Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-select: none;" onclick="bigger();">
-<!--#include file="/state.txt" -->
+<!--#include virtual="/state.txt" -->
 </a>
-<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include virtual="/detail.txt" --></div>
 <!--<div id="shameless-plug" style="font-size: 24pt; font-family: Avenir, sans, sans-serif;"><a href="http://shouldumbcbeopen.com/">Help track the state of UMBC's paths!</a></div>-->
   <script type="text/javascript">
   $(function() {
@@ -184,7 +184,7 @@ Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-sele
 	if (fx.prop == "opacity" && Math.abs(n-.1) < .00001) $(this).remove();
 	}
       }).appendTo($(document.body)));
-      if (++i >= <!--#include file="/paws.txt" -->) {
+      if (++i >= <!--#include virtual="/paws.txt" -->) {
       clearInterval(interval);
       }
       }, 80);

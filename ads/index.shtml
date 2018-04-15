@@ -257,9 +257,9 @@ ADVERTISEMENTS
 </div>
 <a id="isopen" style="font-weight: bold; font-size: 200pt; font-family: 
 Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; user-select: none;" onclick="bigger();">
-<!--#include file="/state.txt" -->
+<!--#include virtual="/state.txt" -->
 </a>
-<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include file="/detail.txt" --></div>
+<div id="detail" style="font-weight: bold; font-size: 40pt; font-family: Avenir, sans-serif; text-decoration: none; color: #000000; padding: 0; font-variant: small-caps;"><!--#include virtual="/detail.txt" --></div>
 
 <div id="da-top" class="da banner" style="top: 5px;">SNOW REMOVAL EQUIPMENT</div>
 <div id="da-bottom" class="da banner" style="bottom: 5px;">SALT BY THE TRUCKLOAD</div>

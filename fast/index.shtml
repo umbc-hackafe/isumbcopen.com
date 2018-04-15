@@ -43,7 +43,7 @@
     }
 
     function setText() {
-    document.getElementById('isopen').innerHTML = '<!--#include file="/state.txt" -->';
+    document.getElementById('isopen').innerHTML = '<!--#include virtual="/state.txt" -->';
     }
 
     $(function(){

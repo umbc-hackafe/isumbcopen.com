@@ -39,7 +39,7 @@ Avenir, sans-serif; text-decoration: none; color: black;" onclick="bigger();">
   <img id="happening" src="happening.gif" style="display: none;"/>
 </a>
 
-<div id="realstatus" style="display: none;"><!--#include file="/state.txt" --></div>
+<div id="realstatus" style="display: none;"><!--#include virtual="/state.txt" --></div>
 
 </body>
 </html>

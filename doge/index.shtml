@@ -36,7 +36,7 @@
 <body onload="test();" style="text-align: center;" id="grad">
 <img id="open" src="open_doge.png" style="height:100%;position:absolute;top:0;left:0;overflow:hidden;"/>
 <img id="closed" src="closed_doge.png" style="display: none;height:100%;position:absolute;top:0;left:0;overflow:hidden;"/>
-<div id="realstatus" style="display: none;"><!--#include file="/state.txt" --></div>
+<div id="realstatus" style="display: none;"><!--#include virtual="/state.txt" --></div>
 
 </body>
 </html>
